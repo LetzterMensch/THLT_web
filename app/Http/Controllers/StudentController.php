@@ -133,7 +133,7 @@ class StudentController extends Controller
             'course_id' => $request->course_id,
             'student_id' => $student_id
         ]);
-        return redirect('/');
+        return redirect('/student/join-course')->with('message', 'Đăng ký khóa học thành công !');
     }
 
     public function joinCoursePrivateSave(Request $request) {
@@ -141,11 +141,12 @@ class StudentController extends Controller
             $student_id = $request->student_id;
             $course = Course::where('code', $_POST['code'])->first();
             if ($course) {
+                // dd($course);
                 JoinCourse::create([
-                    'course_id' => $course->code,
+                    'course_id' => $course->id,
                     'student_id' => $student_id
                 ]);
-                return redirect('/');
+                return redirect('/student/join-course')->with('message', 'Đăng ký khóa học thành công !');
             } else {// not have course
                 return redirect('/');
             }

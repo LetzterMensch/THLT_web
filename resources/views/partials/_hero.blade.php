@@ -2,14 +2,6 @@
 class="relative h-72 bg-laravel flex flex-col justify-center align-center text-center space-y-4 mb-4"
 >
 <div class="grid gap-4 grid-col-3 grid-row-1">
-    <div
-        class="absolute top-0 left-0 w-full h-72 opacity-40 bg-no-repeat bg-left"
-        style="background-image: url('images/pngegg (2).png')"
-    ></div>
-    <div
-        class="absolute top-0 right-0 w-full h-72 opacity-40 bg-no-repeat bg-right"
-        style="background-image: url('images/pngegg (2).png')"
-    ></div>
     <div class="z-10">
         <h1 class="text-6xl font-bold uppercase text-white">
             Online<span class="text-black">Exam</span>
